@@ -2931,5 +2931,671 @@
 			"convertSourceFormat": "ISO19794_6_2011",
 			"convertTargetFormat": "IMAGE/PNG"
 		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with empty <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2076",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is empty and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with empty <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2077",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is empty and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with null <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2078",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is null and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with null <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2079",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is null and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with missing <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2080",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is missing and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with missing <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2081",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is missing and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with empty <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2082",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is empty and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with empty <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2083",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is empty and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with null <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2084",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is null and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with null <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2085",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is null and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with missing <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2086",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is missing and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with missing <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2087",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is missing and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with empty <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2088",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is empty and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with empty <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2089",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is empty and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with null <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2090",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is null and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with null <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2091",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is null and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with missing <BDB> tag and EXCEPTION as true in the input data",
+		"testId": "SDK2092",
+		"testDescription": "Validates that the SDK processes the request and returns a BIR when the <BDB> tag is missing and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ValidResponseValidator",
+					"description": "Validates that the SDK returns a BIR when the BDB is empty, null, or missing and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with missing <BDB> tag and EXCEPTION as false in the input data",
+		"testId": "SDK2093",
+		"testDescription": "Validates that the SDK processes the request and returns an error when the <BDB> tag is missing and <others><entry key='EXCEPTION'>false</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
 	}
 ]
