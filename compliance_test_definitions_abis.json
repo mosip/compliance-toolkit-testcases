@@ -376,10 +376,10 @@
 	},
 	{
 		"testCaseType": "ABIS",
-		"testName": "Invalid Insert request - invalid version",
+		"testName": "Invalid Insert request - invalid version attribute name",
 		"testId": "ABIS3011",
 		"specVersion": "0.9.0",
-		"testDescription": "Invalid Insert request - invalid version",
+		"testDescription": "Invalid Insert request - invalid version attribute name",
 		"isNegativeTestcase": false,
 		"methodName": [
 			"insert"
@@ -406,7 +406,7 @@
 			"bulkInsert": false,
 			"insertCount": "1",
 			"invalidRequestAttribute": "version",
-			"expectedFailureReason": "13"
+			"expectedFailureReason": "4"
 		}
 	},
 	{
@@ -808,10 +808,10 @@
 	},
 	{
 		"testCaseType": "ABIS",
-		"testName": "Invalid Identify request - invalid version",
+		"testName": "Invalid Identify request - invalid version attribute name",
 		"testId": "ABIS3023",
 		"specVersion": "0.9.0",
-		"testDescription": "Invalid Identify request - invalid version",
+		"testDescription": "Invalid Identify request - invalid version attribute name",
 		"isNegativeTestcase": false,
 		"methodName": [
 			"identify"
@@ -836,7 +836,7 @@
 		],
 		"otherAttributes": {
 			"invalidRequestAttribute": "version",
-			"expectedFailureReason": "13",
+			"expectedFailureReason": "4",
 			"identifyReferenceId": "ABIS3023_identify"
 		}
 	},
