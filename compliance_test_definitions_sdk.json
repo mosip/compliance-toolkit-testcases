@@ -1638,7 +1638,7 @@
 				"Extract Template"
 			]
 		}
-	},	
+	},
 	{
 		"testCaseType": "SDK",
 		"testName": "Finger extract invalid data failure",
@@ -2993,7 +2993,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3067,7 +3067,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3141,7 +3141,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3215,7 +3215,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3289,7 +3289,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3363,7 +3363,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3437,7 +3437,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3511,7 +3511,7 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
@@ -3585,7 +3585,118 @@
 				},
 				{
 					"name": "ExceptionResponseValidator",
-					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false in the input data."
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"finger"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Face modality - with valid BDB and EXCEPTION as true in the input data",
+		"testId": "SDK2094",
+		"testDescription": "Validates that the SDK processes the request and returns an error when a valid BDB is provided and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Checks if the response contains all mandatory attributes with valid values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"face"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Iris modality - with valid BDB and EXCEPTION as true in the input data",
+		"testId": "SDK2095",
+		"testDescription": "Validates that the SDK processes the request and returns an error when valid BDB is provided and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Validates if response has all mandatory attributes and they have allowed values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
+				}
+			]
+		],
+		"otherAttributes": {
+			"modalities": [
+				"iris"
+			],
+			"sdkPurpose": [
+				"Extract Template"
+			]
+		}
+	},
+	{
+		"testCaseType": "SDK",
+		"testName": "Checking EXCEPTION flow - Finger modality - with missing BDB tag and EXCEPTION as true in the input data",
+		"testId": "SDK2096",
+		"testDescription": "Validates that the SDK processes the request and returns an error when a valid BDB is provided and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
+		"specVersion": "0.9.0",
+		"isNegativeTestcase": false,
+		"methodName": [
+			"extract-template"
+		],
+		"requestSchema": [
+			"ExtractTemplateRequestSchema"
+		],
+		"responseSchema": [
+			"ExtractTemplateNullResponseSchema"
+		],
+		"validatorDefs": [
+			[
+				{
+					"name": "SchemaValidator",
+					"description": "Checks if the response contains all mandatory attributes with valid values."
+				},
+				{
+					"name": "ExceptionResponseValidator",
+					"description": "Validates that the SDK returns an appropriate error when the BDB is empty, null, or missing and EXCEPTION is set to false, or when the BDB is valid and EXCEPTION is set to true in the input data."
 				}
 			]
 		],
