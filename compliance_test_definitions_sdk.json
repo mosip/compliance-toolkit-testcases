@@ -3674,7 +3674,7 @@
 	},
 	{
 		"testCaseType": "SDK",
-		"testName": "Checking EXCEPTION flow - Finger modality - with missing BDB tag and EXCEPTION as true in the input data",
+		"testName": "Checking EXCEPTION flow - Finger modality - with valid BDB tag and EXCEPTION as true in the input data",
 		"testId": "SDK2096",
 		"testDescription": "Validates that the SDK processes the request and returns an error when a valid BDB is provided and <others><entry key='EXCEPTION'>true</entry></others> is in the input data.",
 		"specVersion": "0.9.0",
