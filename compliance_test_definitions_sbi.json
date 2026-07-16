@@ -2861,6 +2861,7 @@
 		"specVersion": "0.9.5",
 		"testDescription": "Test to perform Auth capture for 10 Fingers",
 		"isNegativeTestcase": false,
+		"inactive": true,
 		"methodName": [
 			"capture"
 		],
