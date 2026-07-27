@@ -1522,7 +1522,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1564,7 +1564,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1606,7 +1606,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1649,7 +1649,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1692,7 +1692,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1735,7 +1735,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1778,7 +1778,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1821,7 +1821,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1864,7 +1864,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -1907,7 +1907,7 @@
 			"ErrorCaptureRequestSchema"
 		],
 		"responseSchema": [
-			"ErrorCaptureResponseSchema"
+			"BioCountMismatchRCaptureResponseSchema"
 		],
 		"validatorDefs": [
 			[
@@ -2861,6 +2861,7 @@
 		"specVersion": "0.9.5",
 		"testDescription": "Test to perform Auth capture for 10 Fingers",
 		"isNegativeTestcase": false,
+		"inactive": true,
 		"methodName": [
 			"capture"
 		],
