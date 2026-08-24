@@ -54,7 +54,7 @@ Each entry in these arrays follows a common shape: `testCaseType`, `testName`, `
 
 ## Development Workflow
 
-- The default integration branch is `develop`. Release branches follow `release-<version>` naming (e.g. `release-1.4.0`), and there is also a `rel14x` branch used for that release line.
+- The default integration branch is `develop`. Release branches follow `release-<version>` naming (e.g. `release-1.4.0`), and there is also a `release-1.4.x` branch used for that release line.
 - There is no local dev environment to run — changes are direct edits to the JSON arrays.
 - After editing, validate the file still parses as JSON (see Build & Test Commands) and check that every new `testId` is unique across all three definition files, since `saveTestCases` loads them into the same backend collection.
 
